@@ -16,13 +16,13 @@
     />
   </head>
   <body>
-    <header class="px-10">
+    <header class="px-20 font-inter">
       <nav class="py-6 flex justify-between items-center">
         <a class=""
           ><svg width="115px" height="20px">
             <use href="./giarddesign.svg#giarddesign"></use></svg
         ></a>
-        <ul class="flex space-x-4 font-inter">
+        <ul class="flex space-x-4">
           <li>Oferta</li>
           <li>O firmie</li>
           <li>Realizacje</li>
@@ -31,28 +31,41 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="font-inter">
       <!-- HERO BLOCK -->
-      <section class="hero px-10">
-        <div>
-          <h1 class="text-6xl font-medium font-montserrat">Nowoczesna aranżacja Twojego ogrodu</h1>
-          <p>
-            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-            podejściem do każdego projektu.
-          </p>
-        </div>
-        <div class="flex gap-9">
-          <button
-            class="font-inter px-6 pt-3 pb-3.5 bg-green-800 text-white rounded-3xl"
-          >
-            Skontaktuj się z nami
-          </button>
-          <button
-            class="font-inter px-6 pt-3 pb-3.5 bg-transparent text-emerald-800 border border-green-800 rounded-3xl"
-          >
-            Zobacz nasze realizacje
-          </button>
+      <section class="bg-[#DCC1AB]">
+        <div class="hero pl-20 flex">
+          <div class="pr-44 flex flex-col justify-center">
+            <h1 class="text-6xl font-medium font-montserrat pb-11">
+              Nowoczesna aranżacja Twojego ogrodu
+            </h1>
+            <p class="pb-72px text-base">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div class="flex gap-9">
+              <button
+                class="px-6 pt-3 pb-3.5 bg-green-800 text-white rounded-3xl"
+              >
+                Skontaktuj się z nami
+              </button>
+              <button
+                class="flex items-center gap-2 px-6 pt-3 pb-3.5 bg-transparent text-emerald-800 border border-green-800 rounded-3xl"
+              >
+                Zobacz nasze realizacje
+                <svg width="16" height="17">
+                  <use href="./images/svg/Vector.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <img
+            srcset="./images/Photo.jpg 1x, ./images/Photo@2x.jpg 2x"
+            alt="pattern"
+            width="688px"
+            height="737px"
+          />
         </div>
       </section>
 
