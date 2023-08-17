@@ -6,6 +6,7 @@
     <title>giarddesign</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -15,27 +16,57 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header class="px-20 font-inter">
-      <nav class="py-6 flex justify-between items-center">
-        <a class=""
-          ><svg width="115px" height="20px">
-            <use href="./giarddesign.svg#giarddesign"></use></svg
-        ></a>
-        <ul class="flex space-x-4">
+      <nav
+        class="py-[calc(1.5rem-6px)] py-0.75 flex justify-between items-center"
+      >
+        <a>
+          <svg width="115px" height="20px">
+            <use href="./giarddesign.svg#giarddesign"></use>
+          </svg>
+        </a>
+
+        <ul
+          id="nav-links"
+          class="nav-mobile md:flex gap gap-12 text-sm items-center"
+        >
           <li>Oferta</li>
           <li>O firmie</li>
           <li>Realizacje</li>
           <li>Kontakt</li>
-          <li></li>
+          <li class="search-container">
+            <input id="search-input" class="search-input" />
+            <svg class="search-icon" width="24px" height="24px">
+              <use href="./images/svg/search.svg#search"></use>
+            </svg>
+          </li>
         </ul>
+
+        <button id="menu-toggle" class="md:hidden">
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </nav>
     </header>
     <main class="font-inter">
       <!-- HERO BLOCK -->
       <section class="bg-[#DCC1AB]">
-        <div class="hero pl-20 flex justify-between">
-          <div class="pr-44 flex flex-col justify-center">
+        <div class="hero pl-20 flex justify-between gap-16">
+          <div class="flex flex-col justify-center w-full md:w-1/2">
             <h1 class="text-6xl font-medium font-montserrat pb-11">
               Nowoczesna aranżacja Twojego ogrodu
             </h1>
@@ -55,22 +86,86 @@
               >
                 Zobacz nasze realizacje
                 <svg width="16" height="17">
-                  <use href="./images/svg/Vector.svg#arrow"></use>
+                  <use href="./images/svg/array.svg#arrow"></use>
                 </svg>
               </button>
             </div>
           </div>
-          <img
-            srcset="./images/Photo.jpg 1x, ./images/Photo@2x.jpg 2x"
-            alt="pattern"
-            width="688px"
-            height="737px"
-          />
+          <div class="hidden md:flex md:flex-row overflow-auto">
+            <img
+              class="object-cover"
+              srcset="./images/Photo.jpg 1x, ./images/Photo@2x.jpg 2x"
+              alt="pattern"
+            />
+          </div>
         </div>
       </section>
 
       <!-- OFERTA BLOCK -->
-      <section class="px-10" id="oferta">OFERTA</section>
+      <section class="bg-[#F5F0EC] px-20" id="oferta">
+        <div class="px-[120px] pt-[120px] pb-24">
+          <p class="pb-4">Oferta</p>
+          <h2 class="pb-8 text-5xl font-montserrat font-medium tracking-tight">
+            Działamy <i class="font-inter">kompleksowo</i>
+          </h2>
+          <span class="text-base leading-4 tracking-[-0.01em]"
+            >Oferujemy kompletną obsługę inwestycji terenów zielonych.
+            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
+            a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
+          </span>
+        </div>
+        <div>
+          <div>
+            <img src="./images/svg/project-card.svg" />
+            <h3>Projekty</h3>
+            <p>
+              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+              wykorzystaniem istniejącej przestrzeni.
+            </p>
+            <button>
+              Dowiedz się więcej
+              <svg class="rotate-[270deg]" width="16" height="17">
+                <use href="./images/svg/array.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <img src="./images/svg/vizual-card.svg" />
+            <h3>Wizualizacje</h3>
+            <p>
+              Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
+              animowanego w technologii 3D.
+            </p>
+            <button>
+              Dowiedz się więcej<svg
+                class="rotate-[270deg]"
+                width="16"
+                height="17"
+              >
+                <use href="./images/svg/array.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <img src="./images/svg/realiz-card.svg" />
+            <h3>Realizacje</h3>
+            <p>
+              Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+              zaawansowanych technologii.
+            </p>
+            <button>
+              Dowiedz się więcej<svg
+                class="rotate-[270deg]"
+                width="16"
+                height="17"
+              >
+                <use href="./images/svg/array.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
 
       <!-- O FIRMIE -->
       <section class="px-10" id="ofirmie">O FIRMIE</section>
@@ -83,4 +178,6 @@
     </main>
     <footer></footer>
   </body>
+
+  <script src="./js/input-filled.js"></script>
 </html>

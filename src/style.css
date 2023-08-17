@@ -1,0 +1,50 @@
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: width 0.5s;
+}
+
+.search-input {
+  width: 0;
+  border-radius: 5px;
+  transition: width 0.6s;
+  overflow: hidden;
+  padding: 5px 10px;
+  outline: 1px solid #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+
+.input-filled,
+.search-container:hover .search-input,
+.search-container:focus-within .search-input {
+  width: 150px;
+  outline: 1px solid #ccc;
+}
+
+.no-outline {
+  outline: none;
+}
+
+/* Ukrywanie nawigacji na urządzeniach mobilnych */
+/* .hidden {
+    display: none;
+  } */
+
+/* Style dla przycisku "burger menu" */
+#menu-toggle {
+  cursor: pointer;
+}
+
+/* Styl nawigacji na urządzeniach mobilnych */
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: none;
+  }
+}
