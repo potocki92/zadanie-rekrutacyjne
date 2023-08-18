@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="px-20 font-inter">
+    <header class="container font-inter">
       <nav
         class="py-[calc(1.5rem-6px)] py-0.75 flex justify-between items-center"
       >
@@ -64,120 +64,237 @@
     </header>
     <main class="font-inter">
       <!-- HERO BLOCK -->
-      <section class="bg-[#DCC1AB]">
-        <div class="hero pl-20 flex justify-between gap-16">
-          <div class="flex flex-col justify-center w-full md:w-1/2">
-            <h1 class="text-6xl font-medium font-montserrat pb-11">
+      <section class="bg-[#DCC1AB] relative section" id="hero">
+        <div
+          class="container hero md:pt-4 flex flex-col md:flex-row justify-between gap-16"
+        >
+          <div class="flex md:pr-16 flex-col justify-center w-full md:w-1/2">
+            <!-- Użycie klas Tailwind do dostosowania czcionek -->
+            <h1 class="text-4xl md:text-6xl font-medium font-montserrat pb-11">
               Nowoczesna aranżacja Twojego ogrodu
             </h1>
-            <p class="pb-72px text-base">
+            <span class="pb-6 text-base md:pb-72px">
               Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
               realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
               podejściem do każdego projektu.
-            </p>
-            <div class="flex gap-9">
+            </span>
+            <div class="flex items-center flex-col lg:flex-row gap-9">
               <button
-                class="px-6 pt-3 pb-3.5 bg-green-800 text-white rounded-3xl"
+                class="px-6 pt-3 pb-3.5 bg-[#1B5B31] text-white rounded-3xl"
               >
                 Skontaktuj się z nami
               </button>
               <button
-                class="flex items-center gap-2 px-6 pt-3 pb-3.5 bg-transparent text-emerald-800 border border-green-800 rounded-3xl"
+                class="flex items-center gap-2 px-6 pt-3 pb-3.5 bg-transparent text-emerald-800 border border-[#1B5B31] rounded-3xl"
               >
                 Zobacz nasze realizacje
-                <svg width="16" height="17">
+                <svg class="w-4 h-4">
                   <use href="./images/svg/array.svg#arrow"></use>
                 </svg>
               </button>
             </div>
           </div>
-          <div class="hidden md:flex md:flex-row overflow-auto">
-            <img
-              class="object-cover"
-              srcset="./images/Photo.jpg 1x, ./images/Photo@2x.jpg 2x"
-              alt="pattern"
-            />
-          </div>
         </div>
+        <img
+          class="absolute top-0 right-0 w-1/2 h-full hidden md:flex md:flex-row overflow-auto object-cover"
+          srcset="./images/Photo.jpg 1x, ./images/Photo@2x.jpg 2x"
+          alt="pattern"
+        />
       </section>
 
       <!-- OFERTA BLOCK -->
-      <section class="bg-[#F5F0EC] px-20" id="oferta">
-        <div class="px-[120px] pt-[120px] pb-24">
-          <p class="pb-4">Oferta</p>
-          <h2 class="pb-8 text-5xl font-montserrat font-medium tracking-tight">
-            Działamy <i class="font-inter">kompleksowo</i>
-          </h2>
-          <span class="text-base leading-4 tracking-[-0.01em]"
-            >Oferujemy kompletną obsługę inwestycji terenów zielonych.
-            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
-            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
-            a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
-          </span>
-        </div>
-        <div>
-          <div>
-            <img src="./images/svg/project-card.svg" />
-            <h3>Projekty</h3>
-            <p>
-              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-              wykorzystaniem istniejącej przestrzeni.
-            </p>
-            <button>
-              Dowiedz się więcej
-              <svg class="rotate-[270deg]" width="16" height="17">
-                <use href="./images/svg/array.svg#arrow"></use>
-              </svg>
-            </button>
+      <section class="bg-[#F5F0EC] section" id="oferta">
+        <div class="container">
+          <div class="lg:px-[120px] pb-24">
+            <p class="pb-4 text-xl md:text-2xl">Oferta</p>
+            <h2
+              class="pb-8 text-3xl md:text-5xl font-montserrat font-medium tracking-tight"
+            >
+              Działamy <i class="font-inter">kompleksowo</i>
+            </h2>
+            <span class="text-base md:text-lg leading-6 tracking-[0.001em]">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+              Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
+              życie, a na każdym etapie posłużymy radą i wieloletnim
+              doświadczeniem.
+            </span>
           </div>
-          <div>
-            <img src="./images/svg/vizual-card.svg" />
-            <h3>Wizualizacje</h3>
-            <p>
-              Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
-              animowanego w technologii 3D.
-            </p>
-            <button>
-              Dowiedz się więcej<svg
-                class="rotate-[270deg]"
-                width="16"
-                height="17"
-              >
-                <use href="./images/svg/array.svg#arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <img src="./images/svg/realiz-card.svg" />
-            <h3>Realizacje</h3>
-            <p>
-              Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
-              zaawansowanych technologii.
-            </p>
-            <button>
-              Dowiedz się więcej<svg
-                class="rotate-[270deg]"
-                width="16"
-                height="17"
-              >
-                <use href="./images/svg/array.svg#arrow"></use>
-              </svg>
-            </button>
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center gap-8 xl:gap-16"
+            id="cards"
+          >
+            <!-- Tutaj dodawaj elementy dla karty oferty -->
           </div>
         </div>
       </section>
 
       <!-- O FIRMIE -->
-      <section class="px-10" id="ofirmie">O FIRMIE</section>
+      <section class="bg-[#1B5B31] relative section text-white" id="ofirmie">
+        <div
+          class="container hero md:pt-4 flex flex-col md:flex-row-reverse justify-between gap-16"
+        >
+          <div
+            class="flex md:pl-20 xl:pl-40 flex-col justify-center w-full md:w-1/2"
+          >
+            <p class="pb-3 text-xs md:text-sm">O firmie</p>
+            <h2 class="pb-6 text-3xl md:text-5xl font-medium font-montserrat">
+              Tworzymy z <i class="font-inter">pasją</i>
+            </h2>
+            <span
+              class="pb-10 text-base md:text-lg font-normal tracking-tighter"
+            >
+              Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+              wykwalifikowani projektanci oraz architekci, których zadaniem jest
+              rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+              specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+              minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+              małoobsługowe, dostosowane do współczesnego trybu życia.
+            </span>
+            <div class="flex gap-6">
+              <button
+                class="flex gap-2 items-center px-6 pt-3 pb-3.5 text-white bg-transparent rounded-3xl border border-white"
+              >
+                Poznaj nas bliżej
+                <svg class="rotate-[270deg]" width="16" height="16">
+                  <use href="./images/svg/array.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          class="absolute top-0 left-0 w-1/2 h-full hidden md:flex md:flex-row overflow-auto object-cover"
+          srcset="./images/realizacje.jpg 1x, ./images/realizacje@2x.jpg 2x"
+          alt="pattern"
+        />
+      </section>
 
       <!-- REALIZACJE -->
-      <section class="px-10" id="realizacje">REALIZACJE</section>
+      <section class="bg-[#DCC1AB] relative section" id="realizacje">
+        <div>
+          <div class="px-[20px] lg:px-[160px]">
+            <p class="text-xs pb-4">Realizacje</p>
+            <h2
+              class="pb-6 text-3xl md:text-5xl font-medium font-montserrat pb-24"
+            >
+              Nasze <i>projekty</i>
+            </h2>
+          </div>
+          <div class="masonry">
+            <!-- Tutaj będą dodawane elementy realizacji -->
+          </div>
+          <button
+            id="expand-button"
+            class="flex gap-2 items-center px-6 pt-3 pb-3.5 text-black rounded-3xl border border-black -translate-x-2/4 relative left-1/2 bottom-20 z-10"
+          >
+            Rozwiń
+            <svg width="16" height="16">
+              <use href="./images/svg/array.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
 
       <!-- INSTAGRAM -->
-      <section class="px-10" id="instagram">INSTAGRAM</section>
+      <section
+        class="bg-[#F5F0EC] relative lg:py-[60px] lg:px-[200px]"
+        id="instagram"
+      >
+        <div
+          class="bg-[#1B5B31] text-white px-6 lg:px-[110px] py-[120px] flex flex-col lg:flex-row gap-6 lg:gap-16 items-end"
+        >
+          <h2
+            class="text-3xl lg:text-[40px] font-montserrat tracking-tight leading-[120%]"
+          >
+            Bądźmy w kontakcie! Odnajdziesz nas na
+            <i class="font-inter tracking-[1px] font-medium">Instagramie</i>.
+          </h2>
+          <div class="flex flex-col gap-4 lg:gap-6">
+            <span class="text-xs lg:text-sm font-normal block tracking-tighter">
+              Śledź nasze najnowsze realizacje!
+            </span>
+            <button
+              class="w-[100px] lg:w-[124px] px-3 lg:px-6 py-2 lg:py-3.5 text-[#1B5B31] rounded-3xl border bg-white border-white"
+            >
+              <a href="https://www.instagram.com/">Instagram</a>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer
+      class="bg-[#111111] relative px-[20px] py-[80px] lg:px-[200px]"
+      id="footer"
+    >
+      <div class="text-[#F5F0EC]">
+        <div>
+          <div
+            class="flex flex-col lg:flex-row lg:justify-between items-center border-b border-[#F5F0EC] pb-[62px] gap-12"
+          >
+            <a>
+              <svg width="115px" height="20px">
+                <use href="./giarddesign.svg#giarddesign"></use>
+              </svg>
+            </a>
+            <div class="flex items-center flex-col lg:flex-row gap-6">
+              <span class="tracking-tighter">
+                Daj znać, co możemy dla Ciebie zrobić!
+              </span>
+              <button
+                class="lg:ml-6 w-[208px] px-6 pt-3 pb-3.5 rounded-3xl border bg-[#1B5B31] border-[#1B5B31]"
+              >
+                Skontaktuj się z nami
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center justify-center lg:justify-between mt-[62px] text-sm tracking-tighter gap-12"
+          >
+            <ul class="flex flex-col lg:flex-row lg:gap-12 gap-6">
+              <li><a href="mailto:giarddesign@kontakt.pl">Kontakt</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+            </ul>
+            <ul
+              class="flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:gap-12 gap-6"
+            >
+              <li><a href="tel:000-000-000">000-000-000</a></li>
+              <li>
+                <a href="mailto:giarddesign@kontakt.pl"
+                  >giarddesign@kontakt.pl</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-[120px] flex flex-col lg:flex-row justify-between items-center"
+        >
+          <span class="tracking-tighter">Prawa zastrzeżone © 2022</span>
+          <div class="flex gap-4">
+            <span class="tracking-tighter">made by</span>
+            <img
+              srcset="
+                ./images/logo-full-light.png    1x,
+                ./images/logo-full-light@2x.png 2x
+              "
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </footer>
   </body>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+  <script type="module" src="./js/mansory.js"></script>
+  <script type="module">
+    import { renderCards } from "./js/cards.js";
+  </script>
   <script src="./js/input-filled.js"></script>
 </html>
