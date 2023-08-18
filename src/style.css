@@ -88,3 +88,7 @@
 .expanded::before {
   background: none;
 }
+
+.show {
+  height: 250px;
+}

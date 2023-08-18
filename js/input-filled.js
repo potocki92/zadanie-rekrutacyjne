@@ -20,7 +20,9 @@ resizeObserver.observe(searchInput);
 
 const menuToggle = document.getElementById("menu-toggle");
 const nav = document.querySelector("nav");
+const links = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("show");
+  links.classList.toggle("nav-mobile");
 });
