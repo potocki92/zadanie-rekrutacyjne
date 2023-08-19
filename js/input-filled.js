@@ -1,3 +1,4 @@
+// Input search
 const searchInput = document.getElementById("search-input");
 
 searchInput.addEventListener("input", () => {
@@ -18,11 +19,25 @@ const resizeObserver = new ResizeObserver((entries) => {
 
 resizeObserver.observe(searchInput);
 
+
+// Mobile 
 const menuToggle = document.getElementById("menu-toggle");
 const nav = document.querySelector("nav");
 const links = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
   nav.classList.toggle("show");
-  links.classList.toggle("nav-mobile");
+  links.classList.toggle("hidden");
+});
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+
+  if (window.innerWidth >= 768) {
+    nav.classList.toggle("show");
+    links.classList.toggle("hidden");
+  } else {
+    nav.classList.toggle("show");
+  }
 });

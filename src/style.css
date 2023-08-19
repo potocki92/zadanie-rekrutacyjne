@@ -43,11 +43,7 @@
 }
 
 /* Styl nawigacji na urządzeniach mobilnych */
-@media (max-width: 768px) {
-  .nav-mobile {
-    display: none;
-  }
-}
+
 
 #hero.section {
   padding: 149px 0;
@@ -91,4 +87,85 @@
 
 .show {
   height: 250px;
+}
+
+/*
+  MODAL BUTTON
+*/
+.burger-button {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px 15px;
+  z-index: 100;
+  user-select: none;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  transition: transform 0.3s ease 0s;
+}
+
+.burger-button span {
+  position: relative;
+  width: 150%;
+  margin-top: -4px;
+}
+
+.burger-button span::before {
+  left: 0px;
+  border-radius: 3px 0px 0px 3px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  background: currentcolor;
+  height: 4px;
+  width: 50%;
+  transition: all 0.25s cubic-bezier(0.6, 0, 0.3, 1) 0s;
+  transform-origin: center center;
+}
+
+.burger-button span::after {
+  right: 0px;
+  border-radius: 0px 3px 3px 0px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  background: currentcolor;
+  height: 4px;
+  width: 50%;
+  transition: all 0.25s cubic-bezier(0.6, 0, 0.3, 1) 0s;
+  transform-origin: center center;
+}
+
+.burger-button span + span {
+  margin-top: 8px;
+}
+
+.burger-button.active span:nth-of-type(1)::before {
+  transform: translate3d(3px, 4.5px, 0px) rotate(45deg);
+}
+.burger-button.active span:nth-of-type(1)::after {
+  transform: translate3d(-3px, 4.5px, 0px) rotate(-45deg);
+}
+.burger-button.active span:nth-last-of-type(2)::before {
+  transform: translateX(-200%);
+}
+.burger-button.active span:nth-last-of-type(2)::after {
+  transform: translateX(200%);
+}
+.burger-button.active span:nth-of-type(3)::before {
+  transform: translate3d(3px, -5.5px, 0px) rotate(-45deg);
+}
+.burger-button.active span:nth-of-type(3)::after {
+  transform: translate3d(-3px, -5.5px, 0px) rotate(45deg);
+}
+.burger-button.active span:nth-of-type(2)::before,
+.burger-button.active span:nth-of-type(2)::after {
+  opacity: 0.0001;
 }

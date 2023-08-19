@@ -20,7 +20,7 @@
   <body>
     <header class="container font-inter">
       <nav
-        class="py-[calc(1.5rem-6px)] gap-[20px] flex flex-col md:flex-row md:justify-between md:items-center"
+        class="relative py-[calc(1.5rem-6px)] gap-[20px] flex flex-col md:flex-row md:justify-between md:items-center"
       >
         <a id="nav-logo">
           <svg width="115px" height="20px">
@@ -30,7 +30,7 @@
 
         <ul
           id="nav-links"
-          class="nav-mobile md:flex gap gap-12 text-sm items-center md:items-center text-end"
+          class="nav-mobile hidden md:flex gap gap-12 text-sm items-center md:items-center text-end"
         >
           <li>Oferta</li>
           <li>O firmie</li>
@@ -43,26 +43,11 @@
             </svg>
           </li>
         </ul>
-
-        <button
-          id="menu-toggle"
-          class="md:hidden absolute top-[20px] right-[20px]"
-        >
-          <svg
-            class="h-6 w-6"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 6H20M4 12H20M4 18H20"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
+        <div class="burger-button flex md:hidden" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
     <main class="font-inter">
