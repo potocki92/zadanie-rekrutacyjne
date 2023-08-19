@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel ./*.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url /zadanie-rekrutacyjne/",
     "deploy": "gh-pages -d dist",
     "build-css": "tailwindcss build style.css -o css/style.css"
   },
