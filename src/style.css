@@ -38,12 +38,19 @@
   } */
 
 /* Style dla przycisku "burger menu" */
+.section {
+  z-index: -1;
+}
+
+#header.container {
+  max-width: 100%;
+  z-index: 10
+}
 #menu-toggle {
   cursor: pointer;
 }
 
 /* Styl nawigacji na urządzeniach mobilnych */
-
 
 #hero.section {
   padding: 149px 0;
@@ -86,9 +93,14 @@
 }
 
 .show {
-  height: 250px;
+  height: 200px;
+  transition: height 0.3s ease-in-out;
 }
-
+nav {
+  height: 60px;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+}
 /*
   MODAL BUTTON
 */
@@ -115,6 +127,7 @@
   position: relative;
   width: 150%;
   margin-top: -4px;
+  z-index: 10;
 }
 
 .burger-button span::before {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html class="scroll-smooth" lang="pl">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="container font-inter">
+    <header class="m-w-[100%] container font-inter" id="header">
       <nav
         class="relative py-[calc(1.5rem-6px)] gap-[20px] flex flex-col md:flex-row md:justify-between md:items-center"
       >
@@ -30,12 +30,12 @@
 
         <ul
           id="nav-links"
-          class="nav-mobile hidden md:flex gap gap-12 text-sm items-center md:items-center text-end"
+          class="nav-mobile  md:flex gap gap-12 text-sm items-center md:items-center text-end"
         >
-          <li>Oferta</li>
-          <li>O firmie</li>
-          <li>Realizacje</li>
-          <li>Kontakt</li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#ofirmie">O firmie</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#contact">Kontakt</a></li>
           <li class="search-container mt-4 md:mt-0 justify-end">
             <input id="search-input" class="search-input" />
             <svg class="search-icon w-6 h-6" width="24px" height="24px">
@@ -214,7 +214,7 @@
     <!-- FOOTER -->
     <footer
       class="bg-[#111111] relative px-[20px] py-[80px] lg:px-[200px]"
-      id="footer"
+      id="contact"
     >
       <div class="text-[#F5F0EC]">
         <div>
