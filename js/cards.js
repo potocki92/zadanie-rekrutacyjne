@@ -25,14 +25,14 @@ const cardsArray = [
     link: "Dowiedz się więcej",
   },
   {
-    img: "vizual-card.85163c10.svg",
+    img: "/vizual-card.85163c10.svg",
     title: "Wizualizacje",
     description:
       "Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.",
     link: "Dowiedz się więcej",
   },
   {
-    img: "realiz-card.f6cd3acf.svg",
+    img: "/realiz-card.f6cd3acf.svg",
     title: "Realizacje",
     description:
       "Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.",
