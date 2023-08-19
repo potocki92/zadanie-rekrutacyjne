@@ -39,7 +39,7 @@
 
 /* Style dla przycisku "burger menu" */
 .section {
-  z-index: -1;
+  z-index: 1;
 }
 
 #header.container {

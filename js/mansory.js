@@ -39,10 +39,8 @@ const loadNextPage = async () => {
 expandButton.addEventListener("click", () => {
   loadNextPage();
   currentPage += 1;
-  if (currentPage === 4) {
     masonryContainer.classList.add("expanded");
     expandButton.remove();
-  }
 });
 
 function macyInit() {
