@@ -1,8 +1,14 @@
 {
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "build-css": "tailwindcss build style.css -o css/style.css"
   },
   "devDependencies": {
+    "parcel": "^2.9.3",
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "simplelightbox": "^2.14.1"
   }
 }

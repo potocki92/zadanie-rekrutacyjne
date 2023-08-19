@@ -1,8 +1,7 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 const masonryContainer = document.querySelector(".masonry");
 const expandButton = document.getElementById("expand-button");
-const initialMasonryHeight = 50;
-const masonryHeightIncrement = 100;
-let currentMasonryHeight = initialMasonryHeight;
 let currentPage = 1;
 
 const fetchImages = async (page) => {
@@ -26,7 +25,6 @@ const renderRealizacja = (image) => {
   return realizacja;
 };
 
-let currentHeight;
 const loadNextPage = async () => {
   const images = await fetchImages(currentPage);
   images.forEach((image) => {
@@ -34,6 +32,12 @@ const loadNextPage = async () => {
   });
 
   macyInit();
+
+  const lightbox = new SimpleLightbox(".realizacje-item a", {
+    captionDelay: 250,
+    captionsData: "alt",
+    overlayOpacity: 0.7,
+  });
 };
 
 expandButton.addEventListener("click", () => {
@@ -65,4 +69,10 @@ window.addEventListener("load", async () => {
 
   macyInit();
   currentPage += 1;
+
+  const lightbox = new SimpleLightbox(".realizacje-item a", {
+    captionDelay: 250,
+    captionsData: "alt",
+    overlayOpacity: 0.7,
+  });
 });

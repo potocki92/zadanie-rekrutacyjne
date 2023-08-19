@@ -46,6 +46,7 @@
   max-width: 100%;
   z-index: 10;
 }
+
 #menu-toggle {
   cursor: pointer;
 }
@@ -90,6 +91,7 @@
 }
 .expanded::before {
   background: none;
+  height: 0;
 }
 
 .show {
@@ -197,4 +199,14 @@ nav {
 
 #dropdown:hover #dropdown-content {
   display: block;
+}
+
+/* Styl dla efektu hover */
+.mini-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
 }
