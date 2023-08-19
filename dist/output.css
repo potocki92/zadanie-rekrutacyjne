@@ -1445,6 +1445,10 @@ video {
   gap: 20px;
 }
 
+.gap-\[7px\] {
+  gap: 7px;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2798,6 +2802,14 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:overflow-visible {
+    overflow: visible;
   }
 
   .md\:pb-72px {
