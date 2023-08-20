@@ -577,6 +577,10 @@ video {
   margin-right: auto;
 }
 
+.img-hero {
+  background: linear-gradient(#2f303a9c, #2f303a2e);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -656,8 +660,8 @@ video {
   inset: -0.25rem;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.bottom-\[-20px\] {
+  bottom: -20px;
 }
 
 .end-1 {

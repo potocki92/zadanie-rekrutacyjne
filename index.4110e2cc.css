@@ -291,6 +291,10 @@ img, video {
   padding-right: 1rem;
 }
 
+.img-hero {
+  background: linear-gradient(#2f303a9c, #2f303a2e);
+}
+
 .sr-only {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -370,8 +374,8 @@ img, video {
   inset: -.25rem;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.bottom-\[-20px\] {
+  bottom: -20px;
 }
 
 .end-1 {
