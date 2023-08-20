@@ -1,17 +1,12 @@
 {
   "scripts": {
-    "start": "parcel ./*.html",
-    "build": "parcel build src/*.html --public-url /zadanie-rekrutacyjne/",
-    "deploy": "gh-pages -d dist",
     "build-css": "tailwindcss build style.css -o css/style.css"
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "parcel": "^2.9.3",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "simplelightbox": "^2.14.1"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  }
 }
