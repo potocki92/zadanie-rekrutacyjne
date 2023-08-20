@@ -584,7 +584,7 @@ let currentPage = 1;
 const fetchImages = async (page)=>{
     const API_KEY = "34880786-eb7cfd58b108d519b70562252";
     const query = "garden";
-    const response = await fetch(`https://pixabay.com/api/?q=${query}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=9`);
+    const response = await fetch(`https://pixabay.com/api/?q=${query}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=21`);
     const data = await response.json();
     return data.hits;
 };
@@ -598,23 +598,20 @@ const renderRealizacja = (image)=>{
   `;
     return realizacja;
 };
-const loadNextPage = async ()=>{
+expandButton.addEventListener("click", async ()=>{
+    currentPage += 1;
     const images = await fetchImages(currentPage);
     images.forEach((image)=>{
         masonryContainer.appendChild(renderRealizacja(image));
     });
     macyInit();
     const lightbox = new (0, _simplelightboxDefault.default)(".realizacje-item a", {
-        captionDelay: 250,
-        captionsData: "alt",
+        captionDelay: 0,
         overlayOpacity: 0.7
     });
-};
-expandButton.addEventListener("click", ()=>{
-    loadNextPage();
-    currentPage += 1;
     masonryContainer.classList.add("expanded");
     expandButton.remove();
+    updateMasonryHeight();
 });
 function macyInit() {
     new Macy({
@@ -629,6 +626,12 @@ function macyInit() {
         }
     });
 }
+function updateMasonryHeight() {
+    const numImages = masonryContainer.querySelectorAll(".realizacje-item").length;
+    const imageHeight = 300; // Wysokość pojedynczego zdjęcia (zmień na odpowiednią wartość)
+    const expandedHeight = numImages * imageHeight; // Całkowita wysokość dla wszystkich zdjęć
+    masonryContainer.style.maxHeight = `${expandedHeight}px`; // Ustaw nową wysokość
+}
 window.addEventListener("load", async ()=>{
     const images = await fetchImages(currentPage);
     images.forEach((image)=>{
@@ -637,8 +640,7 @@ window.addEventListener("load", async ()=>{
     macyInit();
     currentPage += 1;
     const lightbox = new (0, _simplelightboxDefault.default)(".realizacje-item a", {
-        captionDelay: 250,
-        captionsData: "alt",
+        captionDelay: 0,
         overlayOpacity: 0.7
     });
 });
