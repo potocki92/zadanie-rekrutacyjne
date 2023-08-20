@@ -608,6 +608,10 @@ video {
   pointer-events: auto;
 }
 
+.\!visible {
+  visibility: visible !important;
+}
+
 .visible {
   visibility: visible;
 }
@@ -628,8 +632,16 @@ video {
   position: fixed;
 }
 
+.\!absolute {
+  position: absolute !important;
+}
+
 .absolute {
   position: absolute;
+}
+
+.\!relative {
+  position: relative !important;
 }
 
 .relative {
@@ -674,6 +686,10 @@ video {
 
 .isolation-auto {
   isolation: auto;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .z-10 {
@@ -771,6 +787,10 @@ video {
   display: inline-flex;
 }
 
+.\!table {
+  display: table !important;
+}
+
 .table {
   display: table;
 }
@@ -833,6 +853,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-4 {
@@ -2050,6 +2074,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -2354,11 +2382,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-emerald-800 {
-  --tw-text-opacity: 1;
-  color: rgb(6 95 70 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -2699,6 +2722,10 @@ video {
   content: var(--tw-content);
 }
 
+.\!\[a-zA-Z\:_\] {
+  a-z-a--z:  !important;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -2751,6 +2778,16 @@ video {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:border-\[\#184923\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(24 73 35 / var(--tw-border-opacity));
+}
+
+.hover\:bg-\[\#184923\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 73 35 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
@@ -2824,6 +2861,10 @@ video {
     overflow: visible;
   }
 
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
   .md\:pb-72px {
     padding-bottom: 72px;
   }
@@ -2853,6 +2894,25 @@ video {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-\[\#111111\] {
+    --tw-text-opacity: 1;
+    color: rgb(17 17 17 / var(--tw-text-opacity));
+  }
+
+  .md\:text-emerald-800 {
+    --tw-text-opacity: 1;
+    color: rgb(6 95 70 / var(--tw-text-opacity));
+  }
+
+  .md\:hover\:bg-transparent:hover {
+    background-color: transparent;
+  }
+
+  .md\:hover\:text-\[\#184923\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(24 73 35 / var(--tw-text-opacity));
   }
 }
 
