@@ -1,12 +1,19 @@
 {
+  "name": "giarddesign",
+  "homepage": "https://github.com/potocki92/zadanie-rekrutacyjne",
   "scripts": {
-    "build-css": "tailwindcss build style.css -o css/style.css"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/*.html --public-url /zadanie-rekrutacyjne/",
+    "build-css": "tailwindcss build style.css -o css/style.css",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
+    "parcel": "^2.9.3",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
     "simplelightbox": "^2.14.1"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
