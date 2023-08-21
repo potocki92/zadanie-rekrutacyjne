@@ -87,7 +87,7 @@
 }
 
 .show {
-  height: 200px;
+  height: 100vh;
   transition: height .3s ease-in-out;
 }
 
