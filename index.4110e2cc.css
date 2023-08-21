@@ -2550,6 +2550,10 @@ img, video {
 }
 
 @media (width >= 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:mt-0 {
     margin-top: 0;
   }

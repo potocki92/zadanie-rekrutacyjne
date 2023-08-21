@@ -2872,6 +2872,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }

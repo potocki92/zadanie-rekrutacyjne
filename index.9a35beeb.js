@@ -14,8 +14,8 @@
     const links = document.getElementById("nav-links");
     menuToggle.addEventListener("click", ()=>{
         menuToggle.classList.toggle("active");
-        nav.classList.toggle("show");
         links.classList.toggle("invisible");
+        nav.classList.toggle("show");
     });
     const header = document.querySelector("header");
     window.addEventListener("scroll", ()=>{
@@ -26,11 +26,9 @@
     });
     // Dodaj nasłuch szerokości okna
     window.addEventListener("resize", ()=>{
-        links.classList.add("invisible");
         if (window.innerWidth >= 768) {
             menuToggle.classList.remove("active");
             nav.classList.remove("show");
-            links.classList.toggle("invisible");
             header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
         }
     });
