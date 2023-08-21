@@ -398,6 +398,10 @@ img, video {
   top: 0;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -589,6 +593,10 @@ img, video {
   height: 378px;
 }
 
+.h-\[737px\] {
+  height: 737px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -663,6 +671,11 @@ img, video {
 
 .-translate-x-2\/4 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[180deg\] {
+  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1651,6 +1664,11 @@ img, video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-\[white\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: #0000;
 }
@@ -1789,6 +1807,11 @@ img, video {
   padding-right: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
@@ -1817,6 +1840,11 @@ img, video {
 .py-\[calc\(1\.5rem-6px\)\] {
   padding-top: calc(1.5rem - 6px);
   padding-bottom: calc(1.5rem - 6px);
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-10 {
