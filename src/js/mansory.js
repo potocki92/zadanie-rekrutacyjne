@@ -5,6 +5,12 @@ const masonryContainer = document.querySelector(".masonry");
 const expandButton = document.getElementById("expand-button");
 let currentPage = 1;
 
+/**
+ * Pobiera dane obrazów z API.
+ *
+ * @param {number} page - Numer strony do pobrania.
+ * @returns {Promise<Object[]>} - Tablica obiektów reprezentujących obrazy.
+ */
 const fetchImages = async (page) => {
   const API_KEY = "34880786-eb7cfd58b108d519b70562252";
   const query = "garden";
@@ -15,6 +21,12 @@ const fetchImages = async (page) => {
   return data.hits;
 };
 
+/**
+ * Generuje kod HTML dla elementu reprezentującego realizację.
+ *
+ * @param {Object} image - Obiekt reprezentujący obraz.
+ * @returns {HTMLElement} - Element HTML reprezentujący realizację.
+ */
 const renderRealizacja = (image) => {
   const realizacja = document.createElement("div");
   realizacja.classList.add("realizacje-item");
@@ -26,6 +38,9 @@ const renderRealizacja = (image) => {
   return realizacja;
 };
 
+/**
+ * Obsługuje kliknięcie przycisku "Rozwiń", wczytując kolejne obrazy.
+ */
 expandButton.addEventListener("click", async () => {
   currentPage += 1;
 
@@ -60,14 +75,20 @@ function macyInit() {
   });
 }
 
+/**
+ * Aktualizuje wysokość kontenera masonry.
+ */
 function updateMasonryHeight() {
   const numImages =
     masonryContainer.querySelectorAll(".realizacje-item").length;
-  const imageHeight = 300; // Wysokość pojedynczego zdjęcia (zmień na odpowiednią wartość)
-  const expandedHeight = numImages * imageHeight; // Całkowita wysokość dla wszystkich zdjęć
-  masonryContainer.style.maxHeight = `${expandedHeight}px`; // Ustaw nową wysokość
+  const imageHeight = 500;
+  const expandedHeight = numImages * imageHeight;
+  masonryContainer.style.maxHeight = `${expandedHeight}px`;
 }
 
+/**
+ * Obsługuje zdarzenie załadowania strony, wczytując początkowe obrazy.
+ */
 window.addEventListener("load", async () => {
   const images = await fetchImages(currentPage);
   images.forEach((image) => {

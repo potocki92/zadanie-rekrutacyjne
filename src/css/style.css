@@ -32,11 +32,6 @@
   outline: none;
 }
 
-/* Ukrywanie nawigacji na urządzeniach mobilnych */
-/* .hidden {
-    display: none;
-  } */
-
 /* Style dla przycisku "burger menu" */
 .section {
   z-index: 1;
@@ -76,7 +71,7 @@
 }
 
 /*
-  MANSORY
+  masonry
 */
 .masonry {
   max-height: 1000px;

@@ -8,6 +8,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         transform: ["hover", "focus"],
       },
+      transitionProperty: {
+        width: "width",
+      },
       fontSize: {
         "40px": "40px",
       },

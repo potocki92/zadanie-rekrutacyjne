@@ -16,5 +16,8 @@
   "dependencies": {
     "simplelightbox": "^2.14.1"
   },
+  "resolutions": {
+    "@parcel/transformer-image": "2.0.0"
+  },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

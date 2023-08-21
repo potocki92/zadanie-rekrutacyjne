@@ -9,4 +9,9 @@
     @apply mb-0;
     @apply mx-auto;
   }
+
+  .img-hero {
+    background: linear-gradient(#2f303a9c, #2f303a2e);
+  }
+  
 }
