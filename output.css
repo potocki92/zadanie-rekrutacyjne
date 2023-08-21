@@ -2270,6 +2270,11 @@ video {
   font-family: Montserrat, sans-serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2910,6 +2915,10 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
   }
 
   .md\:overflow-visible {
