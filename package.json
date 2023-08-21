@@ -4,7 +4,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/*.html --public-url /zadanie-rekrutacyjne/",
-    "build-css": "tailwindcss build style.css -o css/style.css",
+    "build-css": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
