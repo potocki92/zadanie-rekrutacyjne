@@ -1,4 +1,4 @@
-const renderCards = (card)=>{
+let renderCards = (card)=>{
     const markup = `
     <img width="44" height="44" class="mb-8" src="${card.img}" />
     <h3 class="text-[28px] font-medium font-montserrat tracking-[-0.05em] mb-3">${card.title}</h3>
