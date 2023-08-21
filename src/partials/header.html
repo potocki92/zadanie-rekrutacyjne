@@ -1,26 +1,53 @@
-<header class="m-w-[100%] container font-inter" id="header">
+<header class="z-10 w-[100%] m-w-[100%] font-inter" id="header">
   <nav
-    class="h-[60px] relative py-[calc(1.5rem-6px)] gap-[20px] flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden md:overflow-visible"
+    class="container h-[60px] relative py-[calc(1.5rem-6px)] gap-[20px] flex flex-col md:flex-row md:justify-between md:items-center overflow-hidden md:overflow-visible"
   >
-    <a id="nav-logo">
-      <svg width="115px" height="20px">
-        <use href="./images/svg/giarddesign.svg#giarddesign"></use>
-      </svg>
-    </a>
-
-    <ul
-      id="nav-links"
-      class="nav-mobile md:flex gap gap-12 text-sm items-center md:items-center"
+    <div id="hero-logo">
+      <a href="#hero" id="nav-logo">
+        <svg width="115px" height="20px">
+          <use href="./images/svg/giarddesign.svg#giarddesign"></use>
+        </svg>
+      </a>
+    </div>
+    <div
+      class="nav-links block md:flex md:flex-row text-2xl md:text-sm topnav responsive"
+      id="myTopnav"
     >
-      <li class="relative" id="dropdown">
-        <!-- <a href="#oferta">Oferta</a> -->
-        <button class="flex items-center gap-[7px]">
+      <div class="dropdown">
+        <button class="px-6 py-6 dropbtn flex items-center gap-[7px]">
+          Oferta
+          <svg width="9" height="5">
+            <use href="./images/svg/oferta-icon.svg#oferta"></use>
+          </svg>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a class="px-6 py-6" href="#ofirmie">O firmie</a>
+      <a class="px-6 py-6" href="#realizacje">Realizacje</a>
+      <a class="px-6 py-6" href="#contact">Kontakt</a>
+      <li class="px-6 search-container mt-4 md:mt-0 justify-end">
+        <input id="search-input" class="search-input" />
+        <svg class="search-icon w-6 h-6" width="24px" height="24px">
+          <use href="./images/svg/search.svg#search"></use>
+        </svg>
+      </li>
+    </div>
+    <!-- <ul
+      id="nav-links"
+      class="topnav responsive h-[100%] invisible md:visible nav-mobile flex justify-center flex-col md:flex-row gap gap-16 md:gap-12 text-2xl md:text-sm items-center md:items-center"
+    >
+      <li class="dropdown relative" id="dropdown">
+        <button class="dropbtn flex items-center gap-[7px]">
           <span>Oferta</span>
           <svg width="9" height="5">
             <use href="./images/svg/oferta-icon.svg#oferta"></use>
           </svg>
         </button>
-        <ul id="dropdown-content" class="hidden z-10">
+        <ul id="dropdown-content" class="dropdown-content hidden z-10">
           <li><a href="#">Usługa 1</a></li>
           <li><a href="#">Usługa 2</a></li>
           <li><a href="#">Usługa 3</a></li>
@@ -29,13 +56,8 @@
       <li><a href="#ofirmie">O firmie</a></li>
       <li><a href="#realizacje">Realizacje</a></li>
       <li><a href="#contact">Kontakt</a></li>
-      <li class="search-container mt-4 md:mt-0 justify-end">
-        <input id="search-input" class="search-input" />
-        <svg class="search-icon w-6 h-6" width="24px" height="24px">
-          <use href="./images/svg/search.svg#search"></use>
-        </svg>
-      </li>
-    </ul>
+      
+    </ul> -->
     <div class="burger-button flex md:hidden" id="menu-toggle">
       <span></span>
       <span></span>
