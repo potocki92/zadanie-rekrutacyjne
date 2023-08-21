@@ -2424,12 +2424,6 @@ img, video {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
-.transition-\[width\] {
-  transition-property: width;
-  transition-duration: .15s;
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
 .transition-transform {
   transition-property: transform;
   transition-duration: .15s;
@@ -2438,10 +2432,6 @@ img, video {
 
 .duration-200 {
   transition-duration: .2s;
-}
-
-.duration-500 {
-  transition-duration: .5s;
 }
 
 .ease-in {

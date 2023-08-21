@@ -1,8 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
+/**
+ * Obsługuje zdarzenie załadowania zawartości DOM i inicjalizuje obsługę dotknięć.
+ */ document.addEventListener("DOMContentLoaded", function() {
     const h1 = document.querySelector(".hero h1");
     const span = document.querySelector(".hero span");
     const img = document.querySelector("#hero img");
-    const content = [
+    /**
+   * Zawartość wyświetlana na stronie.
+   * @typedef {Object[]} ContentDataArray
+   * @property {string} text - Tekst nagłówka.
+   * @property {string} spanText - Tekst opisu.
+   * @property {string} imgSrcset - Źródło obrazka ze specyfikacją wielkości.
+   */ const content = [
         {
             text: "Nowoczesna aranżacja Twojego ogrodu",
             spanText: "Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.",
@@ -20,15 +28,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
     let currentIndex = 0;
-    function updateContent() {
+    /**
+   * Funkcja do obsługi zmiany treści wyświetlanej na stronie.
+   */ function updateContent() {
         h1.textContent = content[currentIndex].text;
         span.textContent = content[currentIndex].spanText;
         img.srcset = content[currentIndex].imgSrcset;
     }
-    function handleTouchStart(event) {
+    /**
+   * Obsługuje dotknięcie ekranu, rejestrując pozycję startową dotknięcia.
+   *
+   * @param {TouchEvent} event - Zdarzenie dotknięcia ekranu.
+   */ function handleTouchStart(event) {
         startX = event.touches[0].clientX;
     }
-    function handleTouchEnd(event) {
+    /**
+   * Obsługuje zakończenie dotknięcia ekranu, aktualizując treść na stronie.
+   *
+   * @param {TouchEvent} event - Zdarzenie zakończenia dotknięcia ekranu.
+   */ function handleTouchEnd(event) {
         if (typeof startX === "undefined") return;
         const endX = event.changedTouches[0].clientX;
         const deltaX = startX - endX;
@@ -39,11 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     document.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchend", handleTouchEnd);
-    document.getElementById("before").addEventListener("click", function() {
+    /**
+   * Obsługuje kliknięcie przycisku "Poprzedni", zmieniając wyświetlaną zawartość.
+   */ document.getElementById("before").addEventListener("click", function() {
         currentIndex = (currentIndex - 1 + content.length) % content.length;
         updateContent();
     });
-    document.getElementById("after").addEventListener("click", function() {
+    /**
+   * Obsługuje kliknięcie przycisku "Następny", zmieniając wyświetlaną zawartość.
+   */ document.getElementById("after").addEventListener("click", function() {
         currentIndex = (currentIndex + 1) % content.length;
         updateContent();
     });
