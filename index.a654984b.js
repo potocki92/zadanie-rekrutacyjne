@@ -628,9 +628,9 @@ function macyInit() {
 }
 function updateMasonryHeight() {
     const numImages = masonryContainer.querySelectorAll(".realizacje-item").length;
-    const imageHeight = 300; // Wysokość pojedynczego zdjęcia (zmień na odpowiednią wartość)
-    const expandedHeight = numImages * imageHeight; // Całkowita wysokość dla wszystkich zdjęć
-    masonryContainer.style.maxHeight = `${expandedHeight}px`; // Ustaw nową wysokość
+    const imageHeight = 500;
+    const expandedHeight = numImages * imageHeight;
+    masonryContainer.style.maxHeight = `${expandedHeight}px`;
 }
 window.addEventListener("load", async ()=>{
     const images = await fetchImages(currentPage);
