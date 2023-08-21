@@ -15,19 +15,18 @@
    * Obsługuje menu mobilne oraz nawigację.
    */ const menuToggle = document.getElementById("menu-toggle");
     const nav = document.querySelector("nav");
-    const links = document.getElementById("nav-links");
-    const menuItems = document.querySelectorAll("#nav-links li");
+    const links = document.getElementById("myTopnav");
+    const menuItems = document.querySelectorAll("#myTopnav a");
     const heroLogo = document.getElementById("hero-logo");
+    console.log(links, menuItems);
     menuToggle.addEventListener("click", ()=>{
         menuToggle.classList.toggle("active");
-        links.classList.toggle("invisible");
         nav.classList.toggle("show");
     });
     menuItems.forEach((item, index, array)=>{
-        if (index === 0 || index === array.length - 1) return; // Omiń pierwszy element oraz ostatni element
+        if (index === 0) return; // Omiń pierwszy element oraz ostatni element
         item.addEventListener("click", ()=>{
             if (window.innerWidth <= 768) {
-                links.classList.add("invisible");
                 nav.classList.remove("show");
                 menuToggle.classList.remove("active");
             }
@@ -35,7 +34,6 @@
     });
     heroLogo.addEventListener("click", ()=>{
         if (window.innerWidth <= 768) {
-            links.classList.add("invisible");
             nav.classList.remove("show");
             menuToggle.classList.remove("active");
         }
@@ -55,6 +53,9 @@
             header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
         }
     });
+    /**
+   * Obsługuje responsywną nawigację mobilną.
+   */ const topnav = document.getElementById("myTopnav");
 })();
 
 //# sourceMappingURL=index.9a35beeb.js.map

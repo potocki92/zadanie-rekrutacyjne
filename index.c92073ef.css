@@ -36,7 +36,6 @@
 
 #header.container {
   z-index: 10;
-  max-width: 100%;
 }
 
 #menu-toggle {
@@ -177,6 +176,87 @@ nav {
 
 .burger-button.active span:nth-of-type(2):before, .burger-button.active span:nth-of-type(2):after {
   opacity: .0001;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  z-index: 100;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  display: none;
+  position: absolute;
+  box-shadow: 0 8px 16px #0003;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #000;
+  text-align: left;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: #fff;
+  background-color: #555;
+}
+
+.dropdown-content a:hover {
+  color: #000;
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (width <= 768px) {
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    text-align: left;
+    display: block;
+  }
+
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+
+  .topnav.responsive .dropdown .dropbtn {
+    text-align: left;
+    width: 100%;
+  }
 }
 
 #dropdown-content {
