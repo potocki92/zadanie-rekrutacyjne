@@ -23,8 +23,8 @@
         links.classList.toggle("invisible");
         nav.classList.toggle("show");
     });
-    menuItems.forEach((item, index)=>{
-        if (index === 0 || index === array.length - 1) return; // Omiń pierwszy element
+    menuItems.forEach((item, index, array)=>{
+        if (index === 0 || index === array.length - 1) return; // Omiń pierwszy element oraz ostatni element
         item.addEventListener("click", ()=>{
             if (window.innerWidth <= 768) {
                 links.classList.add("invisible");
