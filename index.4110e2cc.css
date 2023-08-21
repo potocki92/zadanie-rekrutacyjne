@@ -374,6 +374,10 @@ img, video {
   inset: -.25rem;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
 .bottom-\[-20px\] {
   bottom: -20px;
 }
@@ -396,10 +400,6 @@ img, video {
 
 .top-0 {
   top: 0;
-}
-
-.bottom-0 {
-  bottom: 0;
 }
 
 .isolate {
@@ -1827,6 +1827,11 @@ img, video {
   padding-bottom: .5rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-\[120px\] {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1840,11 +1845,6 @@ img, video {
 .py-\[calc\(1\.5rem-6px\)\] {
   padding-top: calc(1.5rem - 6px);
   padding-bottom: calc(1.5rem - 6px);
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-10 {
@@ -1879,8 +1879,16 @@ img, video {
   padding-bottom: 62px;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .pt-3 {
   padding-top: .75rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
 }
 
 .text-left {
