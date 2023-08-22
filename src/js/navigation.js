@@ -12,6 +12,7 @@
     nav.classList.toggle("show");
   });
 
+  console.log(menuItems);
   menuItems.forEach((item, index, array) => {
     if (index === array.length - 1) {
       return; // Pomija ostatni element
