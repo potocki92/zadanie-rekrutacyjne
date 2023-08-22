@@ -4,7 +4,6 @@
    */
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.querySelector("nav");
-  const links = document.getElementById("myTopnav");
   const menuItems = document.querySelectorAll("nav li");
   const heroLogo = document.getElementById("hero-logo");
 
@@ -13,8 +12,8 @@
     nav.classList.toggle("show");
   });
 
-  menuItems.forEach((item, index) => {
-    if (index === 0) {
+  menuItems.forEach((item, index, array) => {
+    if (index === 0 || index === array.length - 1) {
       return; // Omiń pierwszy element oraz ostatni element
     }
     item.addEventListener("click", () => {
@@ -52,6 +51,7 @@
       header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
     }
   });
+
   const sections = document.querySelectorAll("section");
   window.onscroll = () => {
     let current = "";
