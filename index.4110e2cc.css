@@ -414,6 +414,10 @@ img, video {
   z-index: 0;
 }
 
+.z-1 {
+  z-index: 1;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -607,6 +611,10 @@ img, video {
 
 .h-full {
   height: 100%;
+}
+
+.max-h-\[1000px\] {
+  max-height: 1000px;
 }
 
 .max-h-\[378px\] {
@@ -1951,14 +1959,6 @@ img, video {
   padding-top: 120px;
 }
 
-.pt-\[12px\] {
-  padding-top: 12px;
-}
-
-.pb-\[12\] {
-  padding-bottom: 12px;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2583,6 +2583,46 @@ img, video {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.before\:absolute:before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:bottom-0:before {
+  content: var(--tw-content);
+  bottom: 0;
+}
+
+.before\:left-0:before {
+  content: var(--tw-content);
+  left: 0;
+}
+
+.before\:z-10:before {
+  content: var(--tw-content);
+  z-index: 10;
+}
+
+.before\:z-\[1\]:before {
+  content: var(--tw-content);
+  z-index: 1;
+}
+
+.before\:h-\[70\%\]:before {
+  content: var(--tw-content);
+  height: 70%;
+}
+
+.before\:w-\[100\%\]:before {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.before\:content-\[\'\'\]:before {
+  --tw-content: "";
+  content: var(--tw-content);
 }
 
 .hover\:-translate-y-1:hover {

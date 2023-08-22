@@ -11,20 +11,8 @@
   z-index: 1;
 }
 
-.masonry {
-  max-height: 1000px;
-  overflow: hidden;
-}
-
 .masonry:before {
-  content: "";
-  z-index: 1;
   background: linear-gradient(#ffffff03, #dcc1ab);
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .expanded:before {
