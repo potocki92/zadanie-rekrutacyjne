@@ -187,6 +187,11 @@ nav {
 /*
  OFERTA
 */
+
+.active {
+  color: #fff;
+  background-color: #555;
+}
 .topnav {
   overflow: hidden;
 }
@@ -218,12 +223,17 @@ nav {
   text-align: left;
 }
 
-.topnav a:hover,
+.topnav li:hover,
 .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
+  fill: white;
 }
 
+.topnav .search-container:hover {
+  background-color: transparent;
+  color: #111;
+}
 .dropdown-content a:hover {
   background-color: #ddd;
   color: black;

@@ -5,7 +5,7 @@
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.querySelector("nav");
   const links = document.getElementById("myTopnav");
-  const menuItems = document.querySelectorAll("nav a");
+  const menuItems = document.querySelectorAll("nav li");
   const heroLogo = document.getElementById("hero-logo");
 
   menuToggle.addEventListener("click", () => {
@@ -54,31 +54,23 @@
       header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
     }
   });
+  const sections = document.querySelectorAll("section");
+  window.onscroll = () => {
+    let current = "";
 
-  function isElementVisible(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight)
-    );
-  }
-
-  // Funkcja aktualizująca podświetlony link
-  function updateActiveLink() {
-    console.log(menuItems);
-    menuItems.forEach((link) => {
-      const sectionId = link.getAttribute("href");
-      const section = document.querySelector(sectionId);
-
-      if (section && isElementVisible(section)) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
       }
     });
-  }
 
-  // Nasłuchuj zdarzenia przewijania strony
-  window.addEventListener("scroll", updateActiveLink);
+    menuItems.forEach((a) => {
+      a.classList.remove("active");
+      if (a.classList.contains(current)) {
+        console.log(current, a);
+        a.classList.add("active");
+      }
+    });
+  };
 })();

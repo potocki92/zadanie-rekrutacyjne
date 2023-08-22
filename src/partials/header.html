@@ -13,28 +13,38 @@
       class="nav-links block md:flex md:flex-row text-2xl md:text-sm topnav responsive"
       id="myTopnav"
     >
-      <div class="dropdown">
-        <button class="px-6 py-6 dropbtn flex items-center gap-[7px]">
-          <a href="#offer">Oferta</a>
-          <svg width="9" height="5">
-            <use href="./images/svg/oferta-icon.svg#oferta"></use>
-          </svg>
-        </button>
-        <div class="dropdown-content">
-          <a href="#offer-1">Link 1</a>
-          <a href="#offer-2">Link 2</a>
-          <a href="#offer-3">Link 3</a>
+      <ul class="md:flex">
+        <div class="dropdown">
+          <li
+            class="offer list-none px-6 py-6 dropbtn flex items-center gap-[7px]"
+          >
+            <a href="#offer">Oferta </a
+            ><svg width="9" height="5">
+              <use href="./images/svg/oferta-icon.svg#oferta"></use>
+            </svg>
+          </li>
+          <div class="dropdown-content">
+            <a href="#offer-1">Link 1</a>
+            <a href="#offer-2">Link 2</a>
+            <a href="#offer-3">Link 3</a>
+          </div>
         </div>
-      </div>
-      <a class="px-6 py-6" href="#about">O firmie</a>
-      <a class="px-6 py-6" href="#realizations">Realizacje</a>
-      <a class="px-6 py-6" href="#contact">Kontakt</a>
-      <li class="pl-6 search-container mt-4 md:mt-0 justify-end">
-        <input id="search-input" class="search-input" />
-        <svg class="search-icon w-6 h-6" width="24px" height="24px">
-          <use href="./images/svg/search.svg#search"></use>
-        </svg>
-      </li>
+        <li class="about px-6 py-6">
+          <a href="#about">O firmie</a>
+        </li>
+        <li class="realizations px-6 py-6">
+          <a href="#realizations">Realizacje</a>
+        </li>
+        <li class="contact px-6 py-6">
+          <a href="#contact">Kontakt</a>
+        </li>
+        <li class="pl-6 search-container mt-4 md:mt-0 justify-end">
+          <input id="search-input" class="search-input" />
+          <svg class="search-icon w-6 h-6" width="24px" height="24px">
+            <use href="./images/svg/search.svg#search"></use>
+          </svg>
+        </li>
+      </ul>
     </div>
     <div class="burger-button flex md:hidden" id="menu-toggle">
       <span></span>
