@@ -13,8 +13,8 @@
   });
 
   menuItems.forEach((item, index, array) => {
-    if (index === 0 || index === array.length - 1) {
-      return; // Omiń pierwszy element oraz ostatni element
+    if (index === array.length - 1) {
+      return; // Pomija ostatni element
     }
     item.addEventListener("click", () => {
       if (window.innerWidth <= 768) {
