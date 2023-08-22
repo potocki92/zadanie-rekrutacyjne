@@ -94,7 +94,7 @@ nav {
   transition: transform .3s;
   position: absolute;
   top: 6px;
-  right: 0;
+  right: 16px;
 }
 
 .burger-button span {
