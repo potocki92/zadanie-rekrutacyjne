@@ -1870,6 +1870,16 @@ img, video {
   padding-bottom: 120px;
 }
 
+.py-\[135px\] {
+  padding-top: 135px;
+  padding-bottom: 135px;
+}
+
+.py-\[149px\] {
+  padding-top: 149px;
+  padding-bottom: 149px;
+}
+
 .py-\[5px\] {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1913,6 +1923,10 @@ img, video {
   padding-bottom: 2rem;
 }
 
+.pb-\[160px\] {
+  padding-bottom: 160px;
+}
+
 .pb-\[62px\] {
   padding-bottom: 62px;
 }
@@ -1931,6 +1945,18 @@ img, video {
 
 .pt-3 {
   padding-top: .75rem;
+}
+
+.pt-\[120px\] {
+  padding-top: 120px;
+}
+
+.pt-\[12px\] {
+  padding-top: 12px;
+}
+
+.pb-\[12\] {
+  padding-bottom: 12px;
 }
 
 .text-left {
