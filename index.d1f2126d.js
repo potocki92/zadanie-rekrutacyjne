@@ -29,7 +29,7 @@
     /**
    * Obsługuje efekt związany ze zmianą pozycji scrolla.
    */ window.addEventListener("scroll", ()=>{
-        if (window.innerWidth <= 768) window.scrollY > 0 ? header.classList.add("fixed", "top-0", "bg-white", "shadow-md") : header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
+        window.scrollY > 0 ? header.classList.add("fixed", "top-0", "bg-white", "shadow-md") : header.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
     });
     /**
    * Nasłuchuje zmiany szerokości okna przeglądarki.
@@ -49,10 +49,7 @@
         });
         menuItems.forEach((a)=>{
             a.classList.remove("active");
-            if (a.classList.contains(current)) {
-                console.log(current, a);
-                a.classList.add("active");
-            }
+            if (a.classList.contains(current)) a.classList.add("active");
         });
     };
 })();

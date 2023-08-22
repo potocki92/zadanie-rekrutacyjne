@@ -712,6 +712,10 @@ img, video {
   transform: none;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .touch-auto {
   touch-action: auto;
 }
@@ -1856,6 +1860,11 @@ img, video {
 .py-\[calc\(1\.5rem-6px\)\] {
   padding-top: calc(1.5rem - 6px);
   padding-bottom: calc(1.5rem - 6px);
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-10 {
