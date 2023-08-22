@@ -36,6 +36,9 @@ module.exports = {
       maxHeight: {
         378: "378px",
       },
+      zIndex: {
+        1: "1",
+      },
     },
   },
   plugins: [],
