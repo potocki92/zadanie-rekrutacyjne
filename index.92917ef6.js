@@ -17,7 +17,7 @@
     <button class="text-base flex gap-2.5 items-center border-b-2 border-solid text-[#1B5B31] border-[#1B5B31] lg:text-sm xl:text-base">
       ${card.link}
       <svg class="rotate-[270deg]" width="16" height="17">
-        <use href="/zadanie-rekrutacyjne/array.de936614.svg#arrow"></use>
+        <use href="/zadanie-rekrutacyjne/array.98121cc9.svg#arrow"></use>
       </svg>
     </button>`;
     return markup;
