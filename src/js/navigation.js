@@ -53,20 +53,34 @@
   });
 
   const sections = document.querySelectorAll("section");
+  const footer = document.querySelector("footer");
+
+  /**
+   * Funkcja wywoływana przy przewijaniu strony. Aktualizuje stan nawigacji na podstawie aktualnie widocznych sekcji.
+   * @function
+   * @global
+   */
   window.onscroll = () => {
     let current = "";
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
+      if (pageYOffset >= sectionTop - 160) {
         current = section.getAttribute("id");
       }
     });
 
-    menuItems.forEach((a) => {
-      a.classList.remove("active");
-      if (a.classList.contains(current)) {
-        a.classList.add("active");
+    if (footer && pageYOffset + window.innerHeight >= footer.offsetTop) {
+      current = footer.getAttribute("id");
+    }
+
+    menuItems.forEach((item) => {
+      const link = item.querySelector("a");
+      if (link) {
+        item.classList.remove("active");
+        if (link.getAttribute("data-nav") === current) {
+          item.classList.add("active");
+        }
       }
     });
   };
