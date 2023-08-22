@@ -46,16 +46,16 @@
   padding: 149px 0;
 }
 
-#oferta.section {
+#offer.section {
   padding-top: 120px;
   padding-bottom: 160px;
 }
 
-#ofirmie.section {
+#about.section {
   padding: 135px 0;
 }
 
-#realizacje.section {
+#realizations.section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -178,6 +178,11 @@ nav {
   opacity: .0001;
 }
 
+.active {
+  color: #fff;
+  background-color: #555;
+}
+
 .topnav {
   overflow: hidden;
 }
@@ -209,9 +214,15 @@ nav {
   display: block;
 }
 
-.topnav a:hover, .dropdown:hover .dropbtn {
+.topnav li:hover, .dropdown:hover .dropbtn {
   color: #fff;
+  fill: #fff;
   background-color: #555;
+}
+
+.topnav .search-container:hover {
+  color: #111;
+  background-color: #0000;
 }
 
 .dropdown-content a:hover {
