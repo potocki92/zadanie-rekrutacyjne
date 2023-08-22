@@ -1842,6 +1842,11 @@ img, video {
   padding-bottom: .5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1860,11 +1865,6 @@ img, video {
 .py-\[calc\(1\.5rem-6px\)\] {
   padding-top: calc(1.5rem - 6px);
   padding-bottom: calc(1.5rem - 6px);
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .pb-10 {
