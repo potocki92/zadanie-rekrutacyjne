@@ -51,16 +51,16 @@
   padding: 149px 0;
 }
 
-#oferta.section {
+#offer.section {
   padding-top: 120px;
   padding-bottom: 160px;
 }
 
-#ofirmie.section {
+#about.section {
   padding: 135px 0;
 }
 
-#realizacje.section {
+#realizations.section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -190,7 +190,6 @@ nav {
 .topnav {
   overflow: hidden;
 }
-
 
 .topnav .icon {
   display: none;

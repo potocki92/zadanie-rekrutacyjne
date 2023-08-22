@@ -35,6 +35,7 @@ let renderCards = (card) => {
 
 const cardsArray = [
   {
+    id: "offer-1",
     img: "/zadanie-rekrutacyjne/project-card.fca56a7b.svg",
     title: "Projekty",
     description:
@@ -42,6 +43,7 @@ const cardsArray = [
     link: "Dowiedz się więcej",
   },
   {
+    id: "offer-2",
     img: "/zadanie-rekrutacyjne/vizual-card.85163c10.svg",
     title: "Wizualizacje",
     description:
@@ -49,6 +51,7 @@ const cardsArray = [
     link: "Dowiedz się więcej",
   },
   {
+    id: "offer-3",
     img: "/zadanie-rekrutacyjne/realiz-card.f6cd3acf.svg",
     title: "Realizacje",
     description:
@@ -83,6 +86,7 @@ cardsArray.forEach((cardData) => {
     "bg-[#FFFFFF]",
     "rounded-3xl"
   );
+  cardElement.id = cardData.id;
   cardElement.innerHTML = renderCards(cardData);
   cards.appendChild(cardElement);
 });
