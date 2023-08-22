@@ -33,13 +33,20 @@
           <a class="px-6 py-4" href="#about" data-nav="about">O firmie</a>
         </li>
         <li class="flex cursor-pointer realizations">
-          <a class="px-6 py-4" href="#realizations" data-nav="realizations">Realizacje</a>
+          <a class="px-6 py-4" href="#realizations" data-nav="realizations"
+            >Realizacje</a
+          >
         </li>
         <li class="flex cursor-pointer contact">
           <a class="px-6 py-4" href="#contact" data-nav="contact">Kontakt</a>
         </li>
-        <li class="pl-6 search-container mt-4 md:mt-0 justify-end">
-          <input id="search-input" class="search-input" />
+        <li
+          class="pl-6 relative flex items-center search-container mt-4 md:mt-0 justify-end transition-[width] ease-in duration-300"
+        >
+          <input
+            id="search-input"
+            class="search-input w-0 rounded-md transition-[width] ease-in duration-300 overflow-hidden py-[5px] px-[10px] outline-1"
+          />
           <svg class="search-icon w-6 h-6" width="24px" height="24px">
             <use href="./images/svg/search.svg#search"></use>
           </svg>
